@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Profiles from './profiles';
 import { Leaderboard } from './database';
+//import A2SImage from './images/A2S.jpg';
 
 export default function Board() {
 
@@ -12,15 +13,17 @@ export default function Board() {
   }
 
   return (
+    
     <div className="board">
         <h1 className='leaderboard'> A2S Leaderboard</h1>
-
         <div className="duration">
             <button onClick={handleClick} data-id='7'>7 Days</button>
             <button onClick={handleClick} data-id='30'>30 Days</button>
             <button onClick={handleClick} data-id='0'>All-Time</button>
         </div>
-
+        <div>
+            <img src="" alt=""/>
+        </div>
         <Profiles Leaderboard={between(Leaderboard, period)}></Profiles>
 
     </div>

@@ -12,26 +12,33 @@ function Item(data){
     return (
 
         <>
+        <form className="for">
             {
                 data.map((value, index) => (
-                    <form className="A2S">
+                <div className="A2S">
                     <div className="flex" key={index}>
                         <div className="item">
                             <img src={value.img} alt="" />
                             <div className="info">
-                                <h3 className='name text-dark'>{value.name}</h3>    
+                                <h3 className='name text-dark'>{value.username}</h3>    
                                 <span>{value.location}</span>
                             </div>                
                         </div>
                         <div className="item">
-                            <span>{value.score}</span>
+                            <span>{value.field}</span>
+                        </div>
+                        <div className="item">
+                            <span>{value.cell}</span>
+                        </div>
+                        <div className="item">
+                            <span>{value.points}</span>
                         </div>
                     </div>
-                    </form>
-
+                </div>
                     )
                 )
             }
+            </form>
         </>
 
         
